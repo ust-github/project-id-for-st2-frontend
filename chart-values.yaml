@@ -1,0 +1,14 @@
+image:
+  repository: artifactory.dagility.com/docker/project_id_for_st2-frontend
+  tag: latest
+  pullPolicy: Always
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: nginx-internal
+  hosts:
+  - host: project_id_for_st2-frontend-default.dagility.com
+    paths:
+    - /
+serviceAccount:
+  create: false
